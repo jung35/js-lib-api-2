@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "noEmit": true,
+    "declaration": true,
+    "allowJs": true,
+    "removeComments": false,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "declarationDir": "dist",
+    "outDir": "dist"
+  },
+  "include": ["./src"]
+}
