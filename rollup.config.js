@@ -10,7 +10,7 @@ const config = {
   external: [],
   output: { dir: "dist", format: "cjs", exports: "named" },
   plugins: [
-    // cleaner({ targets: ["./dist/"] }),
+    cleaner({ targets: ["./dist/"] }),
     copy({ targets: [{ src: "package.json", dest: "dist/" }] }),
     typescript(),
     nodeResolve(),
