@@ -1,7 +1,7 @@
 {
   "name": "@levelcredit/js-lib-api",
   "description": "",
-  "version": "2.0.0",
+  "version": "2.0.alpha0",
   "main": "index.js",
   "scripts": {
     "build": "rollup -c rollup.config.js",
