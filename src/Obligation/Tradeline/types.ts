@@ -2,8 +2,8 @@ export type TradelineObject = { [key: string]: TradelineStatusObject };
 export type TradelineStatusObject = { status: TradelineStatus };
 
 type TradelineStatus =
-  | "POSITIVE_REPORTED"
-  | "POSITIVE_LOOKBACK_REPORTED"
+  | "POSITIVE_REPORT"
+  | "POSITIVE_LOOKBACK_REPORT"
   | "POSITIVE_LOOKBACK_AVAILABLE"
   | "PENDING_REPORT_HOLD"
   | "PENDING_REPORT"
