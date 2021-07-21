@@ -3,12 +3,13 @@ import getBaseURL from "../../utils/getBaseURL";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
 import { CreditDisplayToken } from "../types";
+import { ScoreObject } from "./types";
 
 type ScoreQuery = { display_token: CreditDisplayToken };
 
 const url_path = "/api/credit/scores";
 
-export default Score as APICall<ScoreQuery>;
+export default Score as APICall<ScoreQuery, ScoreObject>;
 
 async function Score(settings: APIFetchSettings, query: ScoreQuery) {
   const { display_token, ...rest_query } = query;
