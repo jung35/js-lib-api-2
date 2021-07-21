@@ -27,12 +27,12 @@ import LevelCreditAPI from "@levelcredit/js-lib-api";
 
 ## API
 
-All first parameters of each api call requires `settings: APIFetchSettings`. One or both of `env` or `base_url` is required.
+First parameters of each api call requires `settings: APIFetchSettings`.
 ```ts
 type APIFetchSettings = {
-  env?: EnvType; // "development" | "staging" | "production"
+  env: EnvType; // REQUIRED: "development" | "staging" | "production"
   server?: ServerType; // "levelcredit" | "renttrack"; Default: "levelcredit"
-  base_url?: string // Override any api base_url
+  base_url?: string // Override base url of api call. (This won't override url path)
   method?: HTTPRequestMethod; // api should handle this, but this can be overwritten if needed
   auth_token?: string; // for cookie or header auth types
   auth_type?: APIAuthType; // "none" | "cookie" | "header"
