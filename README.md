@@ -8,8 +8,7 @@
 
 ## Getting Started
 
-
-Then install as dependency using `npm install` command
+Install as dependency using `npm install` command
 ```sh
 npm install --save @levelcredit/js-lib-api
 ```
