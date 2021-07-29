@@ -1,1 +1,1 @@
-export type ObligationType = "contract" | "leases" | "utilities";
+export type ObligationType = "contracts" | "leases" | "utilities";
