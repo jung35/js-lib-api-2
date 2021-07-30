@@ -23,7 +23,7 @@ export type EnvType = "development" | "staging" | "production";
 export type ServerType = "levelcredit" | "renttrack";
 
 export type HTTPRequestMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
-export type APIAuthType = "none" | "cookie" | "header";
+export type APIAuthType = "none" | "cookie" | "header" | "header-sid" | "header-authorization";
 
 // Taken from Fetch Response type
 export type Response<ResponseJson> = {
