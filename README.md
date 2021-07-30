@@ -28,10 +28,19 @@ type APIFetchSettings = {
   base_url?: string // Override base url of api call. (This won't override url path)
   method?: HTTPRequestMethod; // api should handle this, but this can be overwritten if needed
   auth_token?: string; // for cookie or header auth types
-  auth_type?: APIAuthType; // "none" | "cookie" | "header"
+  auth_type?: APIAuthType; // "none" | "cookie" | "header" | "header-authorization" | "header-sid"
   headers?: HeadersInit; // Pass any object that follows type { [key: string]: string }
   signal?: AbortSignal; // Used for aborting api call. Pass in AbortSignal
 }
+```
+
+When setting `APIAuthType`, please note that we have 2 ways to authenticate through the header. Setting "header" defaults to using "header-authorization"
+```yml
+# header-authorization
+Authorization: Bearer <access_token>
+
+# header-sid
+SID: <jwt>
 ```
 
 ### Score
