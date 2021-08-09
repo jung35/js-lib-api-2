@@ -11,7 +11,7 @@ const config = {
   output: { dir: "dist", format: "cjs", exports: "named" },
   plugins: [
     cleaner({ targets: ["./dist/"] }),
-    copy({ targets: [{ src: "package.json", dest: "dist/" }] }),
+    copy({ targets: [{ src: ["package.json", "README.md"], dest: "dist/" }] }),
     typescript(),
     nodeResolve(),
     commonjs({ include: [/node_modules/] }),
