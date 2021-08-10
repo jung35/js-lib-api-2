@@ -2,9 +2,9 @@
 
 * [Getting Started](#getting-started)
 * [API](#api)
-  * [Score](#score)
-  * [Insights](#insights)
-  * [Obligation.Tradeline](#obligationtradeline)
+  * [CreditAPI -- Score](#creditapi----score)
+  * [CreditAPI -- Insights](#creditapi----insights)
+  * [ObligationAPI -- Tradeline](#obligationapi----tradeline)
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ Authorization: Bearer <access_token>
 SID: <jwt>
 ```
 
-### Score
+### CreditAPI -- Score
 Authentication via `display_token`
 
 ```ts
@@ -54,7 +54,7 @@ LevelCreditAPI.Credit.Score(settings: APIFetchSettings, query: ScoreQuery);
 
 Returns `Promise<Response<ScoreObject>>`
 
-### Insights
+### CreditAPI -- Insights
 Authentication via `display_token`
 
 ```ts
@@ -65,7 +65,7 @@ LevelCreditAPI.Credit.Insights(settings: APIFetchSettings, query: InsightsQuery)
 
 Returns `Promise<Response<InsightsObject>>`
 
-### Obligation.Tradeline
+### ObligationAPI -- Tradeline
 Authetication via `header` or `cookie`
 
 ```ts
