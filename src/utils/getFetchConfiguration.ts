@@ -7,7 +7,7 @@ export default function getFetchConfiguration(settings: APIFetchRequiredSettings
 
   switch (settings.auth_type) {
     case "cookie":
-      request_init.credentials = "same-origin";
+      request_init.credentials = "include";
       break;
 
     case "header":
