@@ -1,4 +1,4 @@
 import Alerts from "./Alerts";
+import Monitoring from "./Monitoring";
 
-const Monitoring = { Alerts };
-export default Monitoring;
+export default { Alerts, Monitoring };
