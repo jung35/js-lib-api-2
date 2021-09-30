@@ -4,11 +4,11 @@ import getFetchConfiguration from "../../utils/getFetchConfiguration";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
 import { MonitoringObject } from "../types";
 
-type AlertsQuery = Record<string, unknown>;
+type MonitoringQuery = Record<string, unknown>;
 
-export default Alerts as APICall<AlertsQuery, MonitoringObject>;
+export default Monitoring as APICall<null | MonitoringQuery, MonitoringObject>;
 
-async function Alerts(settings: APIFetchSettings, query?: AlertsQuery) {
+async function Monitoring(settings: APIFetchSettings, query?: MonitoringQuery) {
   const rest_query = query || {};
 
   const url_path = `/api/protection/credit_monitoring`;
