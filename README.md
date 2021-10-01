@@ -2,9 +2,14 @@
 
 - [Getting Started](#getting-started)
 - [API](#api)
-  - [CreditAPI -- Score](#creditapi----score)
-  - [CreditAPI -- Insights](#creditapi----insights)
-  - [ObligationAPI -- Tradeline](#obligationapi----tradeline)
+  - [CreditAPI](#creditapi)
+    - [Score](#score)
+    - [Insights](#insights)
+  - [ObligationAPI](#obligationapi)
+    - [Tradeline](#tradeline)
+  - [ProtectionAPI](#protectionapi)
+    - [Monitoring](#monitoring)
+    - [Monitoring Alerts](#monitoring-alerts)
 
 ## Getting Started
 
