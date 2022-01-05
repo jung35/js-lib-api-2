@@ -12,11 +12,10 @@ const url_path = "/api/credit/scores";
 export default Score as APICall<ScoreQuery, ScoreObject>;
 
 async function Score(settings: APIFetchSettings, query: ScoreQuery) {
-  const { display_token, ...rest_query } = query;
-
   const base_url = getBaseURL(settings);
-  const search = toQueryString(rest_query as QueryObject);
+
+  const request_query = toQueryString(query as QueryObject);
   const fetch_configuration = getFetchConfiguration({ method: "GET", ...settings });
 
-  return await window.fetch(`${base_url}${url_path}/${display_token}${search}`, fetch_configuration);
+  return await window.fetch(`${base_url}${url_path}/${request_query}`, fetch_configuration);
 }
