@@ -12,11 +12,10 @@ const url_path = "/api/credit/insights";
 export default Insights as APICall<InsightsQuery, InsightsObject>;
 
 async function Insights(settings: APIFetchSettings, query: InsightsQuery) {
-  const { display_token, ...rest_query } = query;
-
   const base_url = getBaseURL(settings);
-  const search = toQueryString(rest_query as QueryObject);
+
+  const rest_query = toQueryString(query as QueryObject);
   const fetch_configuration = getFetchConfiguration({ method: "GET", ...settings });
 
-  return await window.fetch(`${base_url}${url_path}/${display_token}${search}`, fetch_configuration);
+  return await window.fetch(`${base_url}${url_path}${rest_query}`, fetch_configuration);
 }

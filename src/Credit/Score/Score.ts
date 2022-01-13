@@ -17,5 +17,5 @@ async function Score(settings: APIFetchSettings, query: ScoreQuery) {
   const request_query = toQueryString(query as QueryObject);
   const fetch_configuration = getFetchConfiguration({ method: "GET", ...settings });
 
-  return await window.fetch(`${base_url}${url_path}/${request_query}`, fetch_configuration);
+  return await window.fetch(`${base_url}${url_path}${request_query}`, fetch_configuration);
 }
