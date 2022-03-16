@@ -1,6 +1,6 @@
 export type TradelineObject = { [key: string]: TradelineStatusObject };
-export type TradelineStatusObject = { status: TradelineStatus };
-
+export type TradelineStatusObject = { status: TradelineStatus; transaction_details: TransactionDetailsItem[] };
+export type TransactionDetailsItem = { date: Date; amount: number; name: string; status: string | null };
 type TradelineStatus =
   | "POSITIVE_REPORT"
   | "POSITIVE_LOOKBACK_REPORT"
