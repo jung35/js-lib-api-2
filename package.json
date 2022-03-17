@@ -49,6 +49,7 @@
     "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.13.10"
+    "@babel/runtime": "^7.13.10",
+    "tslib": "^2.3.1"
   }
 }
