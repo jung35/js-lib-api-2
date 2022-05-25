@@ -6,4 +6,5 @@ import Obligation from "./Obligation";
 import Protection from "./Protection";
 
 const LevelCreditAPI = { Credit, Obligation, Protection };
+
 export default LevelCreditAPI;
