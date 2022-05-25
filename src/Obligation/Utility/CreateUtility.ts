@@ -12,3 +12,4 @@ async function CreateUtility(settings: APIFetchSettings, body: UtilityCreateBody
 
   return await window.fetch(`${base_url}${url_path}`, fetch_configuration);
 }
+

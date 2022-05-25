@@ -1,3 +1,7 @@
+import { APICall } from "../../types";
+
+export type UtilityQuery = { "embeds[]": string };
+
 export type UtilityCreateBody = {
   address1: string;
   address2: string;
@@ -48,4 +52,9 @@ export type Utility = {
   transaction_finders?: Array<TransactionFinder>;
   verification_version: number | string;
   utility_provider_url: string;
+};
+
+export type UtilityActions = {
+  GetUtilities: APICall<UtilityQuery, Array<Utility>>;
+  CreateUtility: APICall<UtilityCreateBody, Utility>;
 };

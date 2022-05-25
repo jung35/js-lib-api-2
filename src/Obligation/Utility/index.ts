@@ -1,3 +1,7 @@
-import CreateUtility from "./Utility";
+import CreateUtility from "./CreateUtility";
+import GetUtilities from "./GetUtilities";
+import { UtilityActions } from "./types";
 
-export default CreateUtility;
+const UtilityActions: UtilityActions = { GetUtilities, CreateUtility };
+
+export default UtilityActions;
