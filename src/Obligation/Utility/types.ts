@@ -13,6 +13,7 @@ export type UtilityCreateBody = {
 
 export type UtilityType = "wireless" | "electric" | "gas" | "water";
 export type UtilityStatus = "pending" | "current";
+export type UtilityBusinessModelType = "consumer" | "enterprise";
 
 export type UtilityAddress = {
   address1: string;
@@ -41,7 +42,8 @@ export type TransactionFinder = {
 export type Utility = {
   id: number;
   url: string;
-  type: UtilityType;
+  type: UtilityBusinessModelType;
+  service_type: UtilityType;
   name: string;
   status: UtilityStatus;
   obligation_start_date?: string;
