@@ -1,9 +1,14 @@
 export type ChangePlanBody = {
   subscription_id: string;
-  address1: string;
-  address2?: string;
-  state: string;
-  city: string;
-  zip: string;
-  utility_provider_url: string;
+  plan_name: string;
+  payment_method_url?: string;
+  payment_method?: string;
+  promotion?: {
+    code: string;
+    uuid: string;
+  };
+  user?: {
+    ssn: string;
+    date_of_birth: string;
+  };
 };
