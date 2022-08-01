@@ -1,3 +1,7 @@
-import UtilityProvider from "./UtilityProvider";
+import GetUtilityProvider from "./GetUtilityProviders";
+import CreateUtilityProvider from "./CreateUtilityProvider";
+import { UtilityProviderActions } from "./types";
 
-export default UtilityProvider;
+const UtilityProviderActions: UtilityProviderActions = { GetUtilityProvider, CreateUtilityProvider };
+
+export default UtilityProviderActions;
