@@ -1,7 +1,7 @@
 import Tradeline from "./Tradeline";
-import UtilityProvider from "./UtilityProvider";
+import UtilityProviderActions from "./UtilityProvider";
 import UtilityActions from "./Utility";
 
-const Obligation = { Tradeline, UtilityProvider, UtilityActions };
+const Obligation = { Tradeline, UtilityProviderActions, UtilityActions };
 
 export default Obligation;
