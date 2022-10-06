@@ -1,5 +1,5 @@
 import type { APICall, APIFetchSettings } from "../../types";
-import { Subscription, SubscriptionUpdatePaymentMethodBody, SubscriptionUpdateRenewalBody } from "./types";
+import type { Subscription, SubscriptionUpdatePaymentMethodBody, SubscriptionUpdateRenewalBody } from "./types";
 import getBaseURL from "../../utils/getBaseURL";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
 

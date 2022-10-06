@@ -1,5 +1,5 @@
 import type { APICall, APIFetchSettings } from "../../types";
-import { ChangePlanBody } from "./types";
+import type { ChangePlanBody } from "./types";
 import getBaseURL from "../../utils/getBaseURL";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
 
