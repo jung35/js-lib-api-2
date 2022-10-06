@@ -38,7 +38,7 @@ export type SubscriptionCreateBody = {
 
 export type SubscriptionUpdatePaymentMethodBody = {
   id: number;
-  payment_account_url?: string;
+  payment_method_url?: string;
   payment_method?: string;
 };
 
