@@ -1,5 +1,5 @@
-import { APICall, APIFetchSettings } from "../../types";
-import { UtilityProviderCreateBody, UtilityProviderItem } from "./types";
+import type { APICall, APIFetchSettings } from "../../types";
+import type { UtilityProviderCreateBody, UtilityProviderItem } from "./types";
 import getBaseURL from "../../utils/getBaseURL";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
 

@@ -1,5 +1,5 @@
-import { APICall, APIFetchSettings } from "../../types";
-import { Utility, UtilityQuery } from "./types";
+import type { APICall, APIFetchSettings } from "../../types";
+import type { Utility, UtilityQuery } from "./types";
 import getBaseURL from "../../utils/getBaseURL";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
