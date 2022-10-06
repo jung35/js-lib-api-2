@@ -1,8 +1,8 @@
-import { APICall, APIFetchSettings } from "../../types";
+import type { APICall, APIFetchSettings } from "../../types";
 import getBaseURL from "../../utils/getBaseURL";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
-import { UtilityProviderObject, UtilityProviderQuery } from "./types";
+import type { UtilityProviderObject, UtilityProviderQuery } from "./types";
 
 export default GetUtilityProviders as APICall<UtilityProviderQuery, UtilityProviderObject>;
 

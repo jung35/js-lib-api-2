@@ -1,9 +1,9 @@
-import { APICall, APIFetchSettings } from "../../types";
+import type { APICall, APIFetchSettings } from "../../types";
 import getBaseURL from "../../utils/getBaseURL";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
-import { CreditDisplayToken } from "../types";
-import { InsightsObject } from "./types";
+import type { CreditDisplayToken } from "../types";
+import type { InsightsObject } from "./types";
 
 type InsightsQuery = { display_token: CreditDisplayToken };
 

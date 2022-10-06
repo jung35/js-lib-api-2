@@ -1,10 +1,10 @@
-import { APICall, APIFetchSettings } from "../../types";
+import type { APICall, APIFetchSettings } from "../../types";
 import getBaseURL from "../../utils/getBaseURL";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
-import { SubscriptionPlan, SubscriptionPlanQuery } from "./types";
+import type { SubscriptionPlan, SubscriptionPlanQuery } from "./types";
 
-  export default GetSubscriptionPlan as APICall<SubscriptionPlanQuery, SubscriptionPlan | null>;
+export default GetSubscriptionPlan as APICall<SubscriptionPlanQuery, SubscriptionPlan | null>;
 
 async function GetSubscriptionPlan(settings: APIFetchSettings, query: SubscriptionPlanQuery) {
   const { plan_name, ...rest_query } = query;

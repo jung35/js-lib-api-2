@@ -1,9 +1,9 @@
-import { APICall, APIFetchSettings } from "../../types";
+import type { APICall, APIFetchSettings } from "../../types";
 import getBaseURL from "../../utils/getBaseURL";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
-import { ObligationType } from "../types";
-import { TradelineObject } from "./types";
+import type { ObligationType } from "../types";
+import type { TradelineObject } from "./types";
 
 type TradelineQuery = { type: ObligationType; id: number };
 

@@ -1,8 +1,8 @@
-import { APICall, APIFetchSettings } from "../../types";
+import type { APICall, APIFetchSettings } from "../../types";
 import getBaseURL from "../../utils/getBaseURL";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
-import { SubscriptionPlan, SubscriptionPlansQuery } from "./types";
+import type { SubscriptionPlan, SubscriptionPlansQuery } from "./types";
 
 export default GetSubscriptionPlans as APICall<SubscriptionPlansQuery, Array<SubscriptionPlan>>;
 
