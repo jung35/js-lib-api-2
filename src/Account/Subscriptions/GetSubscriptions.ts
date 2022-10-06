@@ -4,9 +4,9 @@ import getBaseURL from "../../utils/getBaseURL";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
 
-export default GetSubscriptions as APICall<SubscriptionQuery, Array<Subscription>>;
+export default GetSubscriptions as APICall<SubscriptionQuery | void, Array<Subscription>>;
 
-async function GetSubscriptions(settings: APIFetchSettings, query: SubscriptionQuery) {
+async function GetSubscriptions(settings: APIFetchSettings, query: SubscriptionQuery | void) {
   const url_path = `/api/account/subscriptions`;
   const base_url = getBaseURL(settings);
   const search = query?.status ? toQueryString(query as QueryObject) : "";

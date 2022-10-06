@@ -1,10 +1,30 @@
 import { SubscriptionFeature, SubscriptionPlanName } from "../SubscriptionPlan/types";
 
+export type PaymentMethod = {
+  type: string;
+  nickname: string;
+  billing_address_url?: string;
+  billing_address?: {
+    street: string;
+    unit?: string;
+    city: string;
+    state: string;
+    zip: string;
+    is_current: boolean;
+  };
+  name: string;
+  card: {
+    account: string;
+    cvv: string;
+    expiration: string;
+  };
+};
+
 export type ChangePlanBody = {
   subscription_id: string;
   plan_name: string;
   payment_method_url?: string;
-  payment_method?: string;
+  payment_method?: PaymentMethod;
   promotion?: {
     code: string;
     uuid: string;
@@ -21,7 +41,7 @@ export type Subscription = {
   status: "active" | "delinquent";
   plan_name: SubscriptionPlanName;
   plan_features: Array<SubscriptionFeature>;
-  payment_account_url?: string;
+  payment_method_url?: string;
   free_until?: string;
   next_payment_amount?: number;
   discounted_until?: string;
@@ -39,7 +59,7 @@ export type SubscriptionCreateBody = {
 export type SubscriptionUpdatePaymentMethodBody = {
   id: number;
   payment_method_url?: string;
-  payment_method?: string;
+  payment_method?: PaymentMethod;
 };
 
 export type SubscriptionUpdateRenewalBody = {
@@ -51,6 +71,8 @@ export type SubscriptionUpdateRenewalBody = {
 
 export type SubscriptionCancel = {
   id: number;
+  reason_code?: string;
+  reason_message?: string;
 };
 
 export type SubscriptionQuery = {
