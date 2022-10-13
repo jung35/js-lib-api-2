@@ -48,11 +48,17 @@ export type Subscription = {
   next_payment_date?: string;
 };
 
+export type SubscriptionPromotion = {
+  code: string;
+  uuid?: string;
+  uuid_required?: boolean;
+};
+
 export type SubscriptionCreateBody = {
   payment_account_url?: string;
   plan_name: SubscriptionPlanName;
   period: "monthly";
-  promotion_code?: string;
+  promotion?: SubscriptionPromotion;
   erp?: string;
 };
 
