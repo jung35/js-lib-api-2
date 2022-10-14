@@ -9,7 +9,7 @@ export default GetSubscriptions as APICall<SubscriptionQuery | void, Array<Subsc
 async function GetSubscriptions(settings: APIFetchSettings, query: SubscriptionQuery | void) {
   const url_path = `/api/account/subscriptions`;
   const base_url = getBaseURL(settings);
-  const search = query?.status ? toQueryString(query as QueryObject) : "";
+  const search = toQueryString(query as QueryObject);
   const fetch_configuration = getFetchConfiguration({ ...settings, method: "GET" });
 
   return await window.fetch(`${base_url}${url_path}${search}`, fetch_configuration);

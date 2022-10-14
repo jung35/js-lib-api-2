@@ -57,7 +57,6 @@ export type SubscriptionPromotion = {
 export type SubscriptionCreateBody = {
   payment_account_url?: string;
   plan_name: SubscriptionPlanName;
-  period: "monthly";
   promotion?: SubscriptionPromotion;
   erp?: string;
 };
@@ -81,6 +80,4 @@ export type SubscriptionCancel = {
   reason_message?: string;
 };
 
-export type SubscriptionQuery = {
-  status?: "active" | "delinquent" | "canceled";
-};
+export type SubscriptionQuery = { "status[]"?: "active" | "delinquent" | "canceled" };
