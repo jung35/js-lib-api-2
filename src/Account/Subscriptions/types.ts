@@ -80,6 +80,4 @@ export type SubscriptionCancel = {
   reason_message?: string;
 };
 
-export type SubscriptionQuery = {
-  status?: "active" | "delinquent" | "canceled";
-};
+export type SubscriptionQuery = { "status[]"?: "active" | "delinquent" | "canceled" };
