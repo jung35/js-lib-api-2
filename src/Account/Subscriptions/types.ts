@@ -57,7 +57,6 @@ export type SubscriptionPromotion = {
 export type SubscriptionCreateBody = {
   payment_account_url?: string;
   plan_name: SubscriptionPlanName;
-  period: "monthly";
   promotion?: SubscriptionPromotion;
   erp?: string;
 };
