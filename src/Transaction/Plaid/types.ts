@@ -1,8 +1,7 @@
-import { APIFetchSettings } from "../../types";
-
 export type PaymentMatchQuery = {
   object_id: string;
   object_type: PaymentMatchObjectType;
+  "embeds[]"?: string[];
 };
 
 export type PaymentMatch = {
@@ -17,10 +16,6 @@ export type PaymentMatch = {
   verification?: PaymentMatchVerification;
   match_type: PaymentMatchType;
   match_method: PaymentMatchMethod;
-};
-
-export type PaymentMatchAPIFetchSettings = APIFetchSettings & {
-  body?: string;
 };
 
 type PaymentMatchObjectType = "lease" | "utility";
