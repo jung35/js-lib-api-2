@@ -1,7 +1,7 @@
 export type PaymentMatchQuery = {
   object_id: string;
   object_type: PaymentMatchObjectType;
-  "embeds[]"?: string[];
+  "embeds[]"?: string[] | string;
 };
 
 export type PaymentMatch = {
@@ -16,11 +16,13 @@ export type PaymentMatch = {
   verification?: PaymentMatchVerification;
   match_type: PaymentMatchType;
   match_method: PaymentMatchMethod;
+  nominated: PaymentMatchNominated;
 };
 
 type PaymentMatchObjectType = "lease" | "utility";
 type PaymentMatchType = "historical" | "standard";
 type PaymentMatchMethod = "automatic" | "manual";
+type PaymentMatchNominated = "exact" | "fuzzy";
 
 type PaymentMatchVerification = {
   status: PaymentMatchVerificationStatus;
