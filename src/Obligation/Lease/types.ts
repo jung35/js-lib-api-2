@@ -60,6 +60,6 @@ export type Lease = {
 };
 
 export type LeaseActions = {
-  GetUtilities: APICall<LeaseQuery, Array<Lease>>;
+  GetLeases: APICall<LeaseQuery, Array<Lease>>;
   CreateLease: APICall<LeaseCreateBody, Lease>;
 };
