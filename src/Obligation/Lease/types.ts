@@ -1,3 +1,4 @@
+import { APICall } from "../../types";
 export type LeaseQuery = { "embeds[]": string };
 
 export type LeaseCreateBody = {
@@ -56,4 +57,9 @@ export type Lease = {
   products: Array<LeaseProduct>;
   obligation_start_at?: string;
   manual_historical_match_allowed: boolean;
+};
+
+export type LeaseActions = {
+  GetUtilities: APICall<LeaseQuery, Array<Lease>>;
+  CreateLease: APICall<LeaseCreateBody, Lease>;
 };
