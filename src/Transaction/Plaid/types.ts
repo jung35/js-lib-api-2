@@ -4,6 +4,22 @@ export type PaymentMatchQuery = {
   "embeds[]"?: string[] | string;
 };
 
+export type TransactionsQuery = {
+  object_id: number;
+  object_type: PaymentMatchObjectType;
+  match_type?: PaymentMatchType;
+  start?: string;
+  end?: string;
+  min_amount?: number;
+  max_amount?: number;
+  name?: string;
+  include?: string;
+  sort?: string;
+  order?: string;
+  count?: number;
+  offset?: number;
+};
+
 export type PaymentMatch = {
   id: number;
   url: string;
@@ -17,6 +33,11 @@ export type PaymentMatch = {
   match_type: PaymentMatchType;
   match_method: PaymentMatchMethod;
   nominated: PaymentMatchNominated;
+};
+
+export type TransactionMatchCreateBody = {
+  object_url: string;
+  match_type: PaymentMatchType;
 };
 
 type PaymentMatchObjectType = "lease" | "utility";
