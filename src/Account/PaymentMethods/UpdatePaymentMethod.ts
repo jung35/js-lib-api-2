@@ -9,7 +9,7 @@ async function UpdatePaymentMethod(settings: APIFetchSettings, body: PaymentMeth
   const { id, ...rest_body } = body;
   const url_path = `/api/account/payment-methods/${id}`;
   const base_url = getBaseURL(settings);
-  const fetch_configuration = getFetchConfiguration({ ...settings, method: "PUT" }, JSON.stringify(rest_body));
+  const fetch_configuration = getFetchConfiguration({ ...settings, method: "PATCH" }, JSON.stringify(rest_body));
 
   return await window.fetch(`${base_url}${url_path}`, fetch_configuration);
 }
