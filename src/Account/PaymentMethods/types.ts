@@ -110,6 +110,6 @@ export type PaymentMethodRetokenizeBody = {
   };
 };
 
-export type PaymentMethodDelete = {
+export type PaymentMethodReq = {
   id: number;
 };
