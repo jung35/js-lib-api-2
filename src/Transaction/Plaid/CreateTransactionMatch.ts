@@ -4,7 +4,7 @@ import getFetchConfiguration from "../../utils/getFetchConfiguration";
 import toQueryString, { QueryObject } from "../../utils/toQueryString";
 import { PaymentMatch, TransactionMatchCreateBody, TransactionMatchCreateQuery } from "./types";
 
-export default CreateTransactionMatch as APICall<TransactionMatchCreateBody, PaymentMatch>;
+export default CreateTransactionMatch as unknown as APICall<TransactionMatchCreateBody, PaymentMatch>;
 
 function CreateTransactionMatch(
   transaction_id: number,
