@@ -82,6 +82,7 @@ export type PaymentMethodUpdateBody = {
     expiration: string;
   };
   netspend?: boolean;
+  billing_address_url?: string;
 };
 
 export type PaymentMethodRetokenizeBody = {
