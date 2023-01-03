@@ -3,9 +3,9 @@ import getBaseURL from "../../utils/getBaseURL";
 import getFetchConfiguration from "../../utils/getFetchConfiguration";
 import { PlaidItemReq } from "./types";
 
-export default CancelSubscription as APICall<PlaidItemReq, null>;
+export default DeletePlaidItem as APICall<PlaidItemReq, null>;
 
-async function CancelSubscription(settings: APIFetchSettings, { id }: PlaidItemReq) {
+async function DeletePlaidItem(settings: APIFetchSettings, { id }: PlaidItemReq) {
   const url_path = `/api/transaction/plaid/items/${id}`;
   const base_url = getBaseURL(settings);
   const fetch_configuration = getFetchConfiguration({ ...settings, method: "DELETE" });
