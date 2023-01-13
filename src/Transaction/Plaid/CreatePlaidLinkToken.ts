@@ -7,7 +7,7 @@ export default CreatePlaidLinkToken as APICall<PlaidLinkTokenCreateBody, PlaidLi
 
 function CreatePlaidLinkToken(settings: APIFetchSettings, body: PlaidLinkTokenCreateBody) {
   const { id, ...rest_body } = body;
-  const url_path = `/api/transaction/plaid/${id}/link-tokens`;
+  const url_path = `/api/transaction/plaid/items/${id}/link-tokens`;
   const base_url = getBaseURL(settings);
 
   const fetch_configuration = getFetchConfiguration({ method: "POST", ...settings }, JSON.stringify(rest_body));
