@@ -5,7 +5,7 @@ import { PlaidItem, PlaidItemQuery } from "./types";
 
 export default GetPlaidItems as APICall<PlaidItemQuery, Array<PlaidItem>>;
 
-const default_embeds = ["accounts"];
+const default_embeds = ["accounts", "financial_institution"];
 
 function GetPlaidItems(settings: APIFetchSettings, query: PlaidItemQuery) {
   const url_path = "/api/transaction/plaid/items";
