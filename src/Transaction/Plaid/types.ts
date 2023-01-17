@@ -64,3 +64,37 @@ type PaymentMatchVerificationStatus =
   | "in progress"
   | "waiting for info"
   | "renew";
+
+type PlaidItemStatus = "active" | "deleted";
+
+export type PlaidItem = {
+  id: number;
+  url: string;
+  status: PlaidItemStatus;
+  access: string;
+  needs_reconnect: boolean;
+  expiration_time: string;
+};
+
+export type PlaidItemCreateBody = {
+  public_token: string;
+};
+
+export type PlaidItemQuery = {
+  "embeds[]"?: string[] | string;
+};
+
+export type PlaidItemReq = {
+  id: number;
+};
+
+export type PlaidLinkTokenCreateBody = {
+  id: number;
+  redirect_uri: string;
+  link_customization_name: string;
+};
+
+export type PlaidLinkToken = {
+  link_token: string;
+  expiration: string;
+};
