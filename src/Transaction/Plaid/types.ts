@@ -40,6 +40,11 @@ export type TransactionMatchCreateBody = {
   match_type: PaymentMatchType;
 };
 
+export type TransactionMatchCreateQuery = {
+  verification: string;
+  "embeds[]": string;
+};
+
 type PaymentMatchObjectType = "lease" | "utility";
 type PaymentMatchType = "historical" | "standard";
 type PaymentMatchMethod = "automatic" | "manual";
