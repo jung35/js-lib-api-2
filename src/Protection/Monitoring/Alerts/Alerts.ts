@@ -11,7 +11,7 @@ export default Alerts as APICall<null | AlertsQuery, AlertSimple[] | AlertDetail
 async function Alerts(settings: APIFetchSettings, query?: AlertsQuery) {
   const { id, dismiss, ...rest_query } = query || {};
 
-  const url_path = `/api/protection/credit_monitoring/alerts${id ? `/${id}` : ``}`;
+  const url_path = `/api/protection/credit-monitoring/alerts${id ? `/${id}` : ``}`;
   const base_url = getBaseURL(settings);
   const search = toQueryString(rest_query as QueryObject);
   const fetch_configuration = getFetchConfiguration({ method: id && dismiss ? "DELETE" : "GET", ...settings });
