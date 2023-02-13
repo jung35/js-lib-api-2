@@ -11,7 +11,7 @@ export default Monitoring as APICall<null | MonitoringQuery, MonitoringObject>;
 async function Monitoring(settings: APIFetchSettings, query?: MonitoringQuery) {
   const rest_query = query || {};
 
-  const url_path = `/api/protection/credit_monitoring`;
+  const url_path = `/api/protection/credit-monitoring`;
   const base_url = getBaseURL(settings);
   const search = toQueryString(rest_query as QueryObject);
   const fetch_configuration = getFetchConfiguration({ method: "GET", ...settings });
