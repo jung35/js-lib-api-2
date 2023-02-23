@@ -119,7 +119,7 @@ export type PlaidTransaction = {
   created_at: string;
 };
 
-export type RecommendationQuery = {
+export type RecommendationCreateBody = {
   start_date?: string;
   end_date?: string;
 };

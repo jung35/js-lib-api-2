@@ -9,6 +9,8 @@ import CreatePlaidItem from "./CreatePlaidItem";
 import UpdatePlaidItem from "./UpdatePlaidItem";
 import DeletePlaidItem from "./DeletePlaidItem";
 import CreatePlaidLinkToken from "./CreatePlaidLinkToken";
+import CreateRecommendation from "./CreateRecommendation";
+import GetRecommendation from "./GetRecommendation";
 
 const PaymentMatchActions = {
   GetPaymentMatches,
@@ -22,6 +24,8 @@ const PaymentMatchActions = {
   CreatePlaidItem,
   UpdatePlaidItem,
   DeletePlaidItem,
+  CreateRecommendation,
+  GetRecommendation,
 };
 
 export default PaymentMatchActions;
