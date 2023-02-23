@@ -1,3 +1,5 @@
+import { UtilityProviderItem } from "../../Obligation/UtilityProvider/types";
+
 export type PaymentMatchQuery = {
   object_id: string;
   object_type: PaymentMatchObjectType;
@@ -74,6 +76,8 @@ export type PlaidItem = {
   access: string;
   needs_reconnect: boolean;
   expiration_time: string;
+  initial_update_complete: boolean;
+  historical_update_complete: boolean;
 };
 
 export type PlaidItemCreateBody = {
@@ -97,4 +101,39 @@ export type PlaidLinkTokenCreateBody = {
 export type PlaidLinkToken = {
   link_token: string;
   expiration: string;
+};
+
+export type PlaidTransaction = {
+  id: number;
+  url: string;
+  transaction_id: string;
+  amount: string;
+  name: string;
+  category_id: string;
+  date: string;
+  personal_finance_category_primary: string;
+  personal_finance_category_detailed: string;
+  account_id: number;
+  account_url: string;
+  available: boolean;
+  created_at: string;
+};
+
+export type RecommendationCreateBody = {
+  start_date?: string;
+  end_date?: string;
+};
+
+export type RecommendationReq = {
+  id: number;
+};
+
+export type RecommendationStatus = "init" | "complete" | "error";
+
+export type Recommendation = {
+  id: number;
+  url: string;
+  status: RecommendationStatus;
+  transaction: PlaidTransaction;
+  service_providers: UtilityProviderItem[];
 };
