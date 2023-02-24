@@ -130,10 +130,14 @@ export type RecommendationReq = {
 
 export type RecommendationStatus = "init" | "complete" | "error";
 
+export type RecommendationItem = {
+  transaction: PlaidTransaction;
+  service_providers: UtilityProviderItem[];
+};
+
 export type Recommendation = {
   id: number;
   url: string;
   status: RecommendationStatus;
-  transaction: PlaidTransaction;
-  service_providers: UtilityProviderItem[];
+  results: RecommendationItem[];
 };
