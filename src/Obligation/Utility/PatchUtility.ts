@@ -7,7 +7,7 @@ export default PatchUtility as APICall<UtilityPatchBody, Utility>;
 
 async function PatchUtility(settings: APIFetchSettings, body: UtilityPatchBody) {
   const { id, ...rest_body } = body;
-  const url_path = `/api/account/payment-methods/${id}`;
+  const url_path = `/api/obligation/utilities/${id}`;
   const base_url = getBaseURL(settings);
   const fetch_configuration = getFetchConfiguration({ ...settings, method: "PATCH" }, JSON.stringify(rest_body));
 
