@@ -59,7 +59,20 @@ export type Lease = {
   manual_historical_match_allowed: boolean;
 };
 
+export type LeasePatchBody = {
+  id: number;
+  address?: LeaseAddress;
+  rent?: number;
+  due_day?: string;
+  start_at?: string;
+  landlord?: LeaseLandlord;
+  moved_out?: string;
+  moved_out_code?: string;
+  moved_out_message?: string;
+};
+
 export type LeaseActions = {
   GetLeases: APICall<LeaseQuery, Array<Lease>>;
   CreateLease: APICall<LeaseCreateBody, Lease>;
+  PatchLease: APICall<LeasePatchBody, Lease>;
 };
