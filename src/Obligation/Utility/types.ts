@@ -56,7 +56,20 @@ export type Utility = {
   utility_provider_url: string;
 };
 
+export type UtilityPatchBody = {
+  id: number;
+  address1?: string;
+  address2?: string;
+  state?: string;
+  city?: string;
+  zip?: string;
+  account_closed?: string;
+  account_closed_code?: string;
+  account_closed_message?: string;
+};
+
 export type UtilityActions = {
   GetUtilities: APICall<UtilityQuery, Array<Utility>>;
   CreateUtility: APICall<UtilityCreateBody, Utility>;
+  PatchUtility: APICall<UtilityPatchBody, Utility>;
 };

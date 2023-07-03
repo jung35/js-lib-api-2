@@ -1,6 +1,6 @@
 {
   "name": "@levelcredit/js-lib-api",
-  "version": "2.10.0",
+  "version": "2.11.1",
   "description": "LevelCredit Javascript API Library",
   "main": "index.js",
   "scripts": {
