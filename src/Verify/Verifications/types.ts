@@ -19,3 +19,7 @@ export type Verification = {
   status: VerificationStatus;
   type: VerificationType;
 };
+
+export type VerifcationPrecheck = {
+  verification_required: true | false | "unavailable";
+};
