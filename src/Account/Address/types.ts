@@ -24,4 +24,9 @@ export type AddressQuery = {
     city?: string;
     state?: string;
     zip?: string;
-}
+};
+
+export type AddressUpdateBody = {
+    id: number;
+    is_current: boolean;
+};
