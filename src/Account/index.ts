@@ -4,6 +4,7 @@ import AddressesActions from "./Address";
 import PaymentMethodsActions from "./PaymentMethods";
 import ReceiptsActions from "./Receipts";
 import ProductsActions from "./Products";
+import ProfileActions from "./Profile";
 
 const Account = {
   SubscriptionPlanActions,
@@ -12,6 +13,7 @@ const Account = {
   PaymentMethodsActions,
   ReceiptsActions,
   ProductsActions,
+  ProfileActions,
 };
 
 export default Account;
