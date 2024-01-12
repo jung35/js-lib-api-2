@@ -43,3 +43,7 @@ export type ProfileUpdateBody = {
 export type ProfileReq = {
   id: number;
 };
+
+export type ProfilesQuery = {
+  "embeds[]"?: string;
+};
