@@ -6,10 +6,9 @@ import getFetchConfiguration from "../../utils/getFetchConfiguration";
 export default UpdateProfile as APICall<ProfileUpdateBody, Profile>;
 
 async function UpdateProfile(settings: APIFetchSettings, body: ProfileUpdateBody) {
-  const { id, ...rest_body } = body;
-  const url_path = `/api/account/profile/${id}`;
+  const url_path = `/api/account/profile`;
   const base_url = getBaseURL(settings);
-  const fetch_configuration = getFetchConfiguration({ ...settings, method: "PATCH" }, JSON.stringify(rest_body));
+  const fetch_configuration = getFetchConfiguration({ ...settings, method: "PATCH" }, JSON.stringify(body));
 
   return await window.fetch(`${base_url}${url_path}`, fetch_configuration);
 }
